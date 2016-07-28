@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
+    private static final int LOCATION_GRAB = 1234;
     public static MockLocationProvider mockLocationProvider;
 
     @Override
@@ -34,6 +35,13 @@ public class MainActivity extends AppCompatActivity {
         setupClickListener(R.id.go_to_bismark, 46.819931, -100.7985263);
         setupClickListener(R.id.go_to_sandiego, 32.841244, -117.281568);
         setupClickListener(R.id.go_to_dayton, 39.740528, -84.1818745);
+
+        findViewById(R.id.showMap).setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, MapActivity.class);
+                startActivityForResult(intent, LOCATION_GRAB);
+            }
+        });
     }
 
     private void setupClickListener(int id, final double aLat, final double aLong) {

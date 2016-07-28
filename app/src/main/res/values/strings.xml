@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SendAway</string>
+    <string name="title_activity_map">Pick A Place</string>
 </resources>

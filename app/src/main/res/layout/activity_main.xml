@@ -1,70 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:orientation="vertical"
-    tools:context="com.yardspoon.sendaway.MainActivity"
-    android:gravity="center">
+    android:paddingTop="@dimen/activity_vertical_margin">
 
-    <android.support.v7.widget.AppCompatTextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:textAllCaps="true"
-        android:textStyle="bold"
-        android:text="Send Away To...."/>
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
 
-    <Button
-        android:id="@+id/go_to_louisville"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Louisville, KY, US"/>
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:text="Send Away To...."/>
 
-    <Button
-        android:id="@+id/go_to_stl"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="St. Louis, MO, US"/>
+        <Button
+            android:id="@+id/go_to_louisville"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Louisville, KY, US"/>
 
-    <Button
-        android:id="@+id/go_to_peterborough"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Peterborough, ON, CANADA"/>
+        <Button
+            android:id="@+id/go_to_stl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="St. Louis, MO, US"/>
 
-    <Button
-        android:id="@+id/go_to_salluit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Salluit, QC, CANADA"/>
+        <Button
+            android:id="@+id/go_to_peterborough"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Peterborough, ON, CANADA"/>
 
-    <Button
-        android:id="@+id/go_to_honolulu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Honolulu, HI, US"/>
+        <Button
+            android:id="@+id/go_to_salluit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Salluit, QC, CANADA"/>
 
-    <Button
-        android:id="@+id/go_to_bismark"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Bismark, ND, US"/>
+        <Button
+            android:id="@+id/go_to_honolulu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Honolulu, HI, US"/>
 
-    <Button
-        android:id="@+id/go_to_sandiego"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="San Diego, CA, US"/>
+        <Button
+            android:id="@+id/go_to_bismark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bismark, ND, US"/>
 
-    <Button
-        android:id="@+id/go_to_dayton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Dayton, OH, US"/>
-</LinearLayout>
+        <Button
+            android:id="@+id/go_to_sandiego"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="San Diego, CA, US"/>
+
+        <Button
+            android:id="@+id/go_to_dayton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dayton, OH, US"/>
+
+        <Button
+            android:id="@+id/showMap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Custom With Map"/>
+    </LinearLayout>
+
+</ScrollView>
