@@ -12,21 +12,59 @@
     tools:context="com.yardspoon.sendaway.MainActivity"
     android:gravity="center">
 
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:text="Send Away To...."/>
+
+    <Button
+        android:id="@+id/go_to_louisville"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Louisville, KY, US"/>
+
+    <Button
+        android:id="@+id/go_to_stl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="St. Louis, MO, US"/>
+
+    <Button
+        android:id="@+id/go_to_peterborough"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Peterborough, ON, CANADA"/>
+
+    <Button
+        android:id="@+id/go_to_salluit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Salluit, QC, CANADA"/>
+
+    <Button
+        android:id="@+id/go_to_honolulu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Honolulu, HI, US"/>
+
     <Button
         android:id="@+id/go_to_bismark"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="GO TO BISMARK"/>
+        android:text="Bismark, ND, US"/>
 
     <Button
         android:id="@+id/go_to_sandiego"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="GO TO SAN DIEGO"/>
+        android:text="San Diego, CA, US"/>
 
     <Button
         android:id="@+id/go_to_dayton"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="GO TO DAYTON"/>
+        android:text="Dayton, OH, US"/>
 </LinearLayout>
