@@ -28,18 +28,18 @@ public class MainActivity extends AppCompatActivity {
 
         setupClickListener(R.id.go_to_louisville, 38.199135, -85.5736522);
         setupClickListener(R.id.go_to_stl, 38.633387, -90.2470689);
-        setupClickListener(R.id.go_to_peterborough, 46.819931, 100.7985263);
+        setupClickListener(R.id.go_to_peterborough, 44.3151891, -78.360679);
         setupClickListener(R.id.go_to_salluit, 62.2047572, -75.6512441);
         setupClickListener(R.id.go_to_honolulu, 21.3543173, -157.9438843);
-        setupClickListener(R.id.go_to_bismark, 46.819931, 100.7985263);
-        setupClickListener(R.id.go_to_sandiego, 32.841244, 117.281568);
-        setupClickListener(R.id.go_to_dayton, 39.740528, 84.1818745);
+        setupClickListener(R.id.go_to_bismark, 46.819931, -100.7985263);
+        setupClickListener(R.id.go_to_sandiego, 32.841244, -117.281568);
+        setupClickListener(R.id.go_to_dayton, 39.740528, -84.1818745);
     }
 
     private void setupClickListener(int id, final double aLat, final double aLong) {
         findViewById(id).setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View view) {
-                changeLocation(aLat, -aLong); }
+                changeLocation(aLat,  aLong); }
         });
     }
 
