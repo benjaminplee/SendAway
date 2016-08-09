@@ -16,8 +16,6 @@ public class MockLocationProvider {
     private GoogleApiClient apiClient;
     private boolean started = false;
 
-    private static final String ACCESS_MOCK_LOCATION_PERMISSION = "android.permission.ACCESS_MOCK_LOCATION";
-
     public MockLocationProvider(Context context) {
         this.context = context;
     }
@@ -25,21 +23,10 @@ public class MockLocationProvider {
     public boolean startup() {
         if (!started) {
             apiClient = buildAPIClientAndConnectToGoogleLocationServices(context);
-            if (doesNotHaveMockLocationPermission() || isNotSetAsMockLocationApp()) {
-                return false;
-            }
             LocationServices.FusedLocationApi.setMockMode(apiClient, true);
             started = true;
         }
         return true;
-    }
-
-    private boolean doesNotHaveMockLocationPermission() {
-        return ActivityCompat.checkSelfPermission(context, ACCESS_MOCK_LOCATION_PERMISSION) != PackageManager.PERMISSION_GRANTED;
-    }
-
-    private boolean isNotSetAsMockLocationApp() {
-        return Settings.Secure.getString(context.getContentResolver(), Settings.Secure.ALLOW_MOCK_LOCATION).equals("0");
     }
 
     public boolean pushLocation(double lat, double lon) {
@@ -51,9 +38,6 @@ public class MockLocationProvider {
         mockLocation.setTime(System.currentTimeMillis());
         mockLocation.setElapsedRealtimeNanos(42);
 
-        if (doesNotHaveMockLocationPermission() || isNotSetAsMockLocationApp()) {
-            return false;
-        }
         LocationServices.FusedLocationApi.setMockLocation(apiClient, mockLocation);
 
         return true;
@@ -61,9 +45,6 @@ public class MockLocationProvider {
 
     public boolean shutdown() {
         if (started) {
-            if (doesNotHaveMockLocationPermission() || isNotSetAsMockLocationApp()) {
-                return false;
-            }
             LocationServices.FusedLocationApi.setMockMode(apiClient, false);
             apiClient.disconnect();
         }
