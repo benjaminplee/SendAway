@@ -3,9 +3,11 @@ package com.yardspoon.sendaway;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.annotation.BoolRes;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private static final int LOCATION_GRAB = 1234;
@@ -18,12 +20,17 @@ public class MainActivity extends AppCompatActivity {
 
         mockLocationProvider = new MockLocationProvider(getApplicationContext());
 
-        new AsyncTask<Void, Void, Void>() {
-            @Override protected Void doInBackground(Void... voids) {
+        new AsyncTask<Void, Void, Boolean>() {
+            @Override protected Boolean doInBackground(Void... voids) {
                 Log.i("SendAway", "Starting mock location provider");
-                mockLocationProvider.startup();
-                Log.i("SendAway", "Started mock location provider");
-                return null;
+                return mockLocationProvider.startup();
+            }
+
+            @Override protected void onPostExecute(Boolean result) {
+                super.onPostExecute(result);
+                if(Boolean.FALSE.equals(result)) {
+                    Toast.makeText(MainActivity.this, "Unable to start mock location service. Check permissions.", Toast.LENGTH_LONG).show();
+                }
             }
         }.execute();
 
@@ -35,13 +42,6 @@ public class MainActivity extends AppCompatActivity {
         setupClickListener(R.id.go_to_bismark, 46.819931, -100.7985263);
         setupClickListener(R.id.go_to_sandiego, 32.841244, -117.281568);
         setupClickListener(R.id.go_to_dayton, 39.740528, -84.1818745);
-
-        findViewById(R.id.showMap).setOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, MapActivity.class);
-                startActivityForResult(intent, LOCATION_GRAB);
-            }
-        });
     }
 
     private void setupClickListener(int id, final double aLat, final double aLong) {
