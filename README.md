@@ -32,8 +32,7 @@ The Squatter project uses [SemVer](http://semver.org/) for versioning and tracks
 
 ## Authors
 
-* **Benjamin Lee** - *Initial work* -
-  [benjaminplee](https://github.com/benjaminplee)
+* **Benjamin Lee** - [benjaminplee](https://github.com/benjaminplee)
 
 ## License
 
