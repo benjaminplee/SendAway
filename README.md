@@ -28,7 +28,7 @@ Work in progress
 
 ## Versioning
 
-The Squatter project uses [SemVer](http://semver.org/) for versioning and tracks changes in the [CHANGELOG.md](CHANGELOG.txt) file. Versions available can also be found as Git [tags](https://github.com/benjaminplee/SendAway/tags). 
+The Squatter project uses [SemVer](http://semver.org/) for versioning and tracks changes in the [CHANGELOG.md](CHANGELOG.md) file. Versions available can also be found as Git [tags](https://github.com/benjaminplee/SendAway/tags). 
 
 ## Authors
 
