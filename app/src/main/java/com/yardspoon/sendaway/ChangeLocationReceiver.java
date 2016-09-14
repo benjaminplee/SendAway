@@ -6,7 +6,8 @@ import android.content.Intent;
 import android.util.Log;
 
 public class ChangeLocationReceiver extends BroadcastReceiver {
-    @Override public void onReceive(Context context, Intent intent) {
+    @Override
+    public void onReceive(Context context, Intent intent) {
         double aLat = intent.getDoubleExtra("lat", 38.0);
         double aLong = intent.getDoubleExtra("long", -90);
 
