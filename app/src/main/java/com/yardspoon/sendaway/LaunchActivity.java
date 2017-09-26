@@ -2,8 +2,10 @@ package com.yardspoon.sendaway;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import com.crashlytics.android.Crashlytics;
+import io.fabric.sdk.android.Fabric;
 
-public class Launch extends AppCompatActivity {
+public class LaunchActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
