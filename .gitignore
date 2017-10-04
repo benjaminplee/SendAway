@@ -9,3 +9,4 @@
 .externalNativeBuild
 
 app/src/main/assets/paperwork.json
+app/fabric.properties
